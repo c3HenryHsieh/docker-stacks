@@ -125,7 +125,8 @@ RUN set -x && \
         'mamba' \
         'notebook' \
         'jupyterhub' \
-        'jupyterlab' && \
+        'jupyterlab' \
+        'nbclassic' && \
     rm micromamba && \
     # Pin major.minor version of python
     mamba list python | grep '^python ' | tr -s ' ' | cut -d ' ' -f 1,2 >> "${CONDA_DIR}/conda-meta/pinned" && \
